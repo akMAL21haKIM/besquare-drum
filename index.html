@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Heebo" rel="stylesheet" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Drum App</title>
-    </head>
-    <body>
-        <nav>
-            <div class="branding">Drum App</div>
-            <div class="menu-buttons">
-                <button id="start_game">Start Game</button>
-                <button id="record">Record</button>
-                <button id="playback">Playback</button>
-                <button>Settings</button>
-            </div>
-        </nav>
-        <div class="main-container">
-            <div class="score container">
-                <div class="card score-card">
-                    <div class="score-header">Score</div>
-                    <div id="score">0</div>
-                </div>
-            </div>
-            <div id="targets" class="sequence container">
-                <div class="card sequence-card">A</div>
-                <div class="card sequence-card">A</div>
-                <div class="card sequence-card">A</div>
-                <div class="card sequence-card active">A</div>
-                <div class="card sequence-card">A</div>
-                <div class="card sequence-card">A</div>
-                <div class="card sequence-card">A</div>
-            </div>
-            <div id="controls" class="control container"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drum App</title>
+  </head>
+  <body>
+    <nav>
+      <div class="branding">Drum App</div>
+      <div class="menu-buttons">
+        <button id="start_game">Start Game</button>
+        <button id="record">Record</button>
+        <button id="playback">Playback</button>
+        <button id="settings">Settings</button>
+      </div>
+    </nav>
+
+    <div class="main-container">
+      <div id="Mcontainer">
+        <div class="score container">
+          <div class="card score-card">
+            <div class="score-header">Score</div>
+            <div id="score">0</div>
+          </div>
         </div>
-        <script type="module" src="/main.js"></script>
-    </body>
+        <div id="targets" class="sequence container"></div>
+        <div id="controls" class="control container"></div>
+      </div>
+    </div>
+    <div class="form1" id="form">
+      <form class="form-section">
+        <label>Boom:</label><br />
+        <input type="text" id="boom" placeholder="Please input" /><br />
+        <label>Clap:</label><br />
+        <input type="text" id="clap" placeholder="Please input" /><br />
+        <label>Hi_Hat:</label><br />
+        <input type="text" id="hihat" placeholder="Please input" /><br />
+        <label>Kick:</label><br />
+        <input type="text" id="kick" placeholder="Please input" /><br />
+        <label>Open_Hat:</label><br />
+        <input type="text" id="openhat" placeholder="Please input" /><br />
+        <label>Ride:</label><br />
+        <input type="text" id="ride" placeholder="Please input" /><br />
+        <label>Snare:</label><br />
+        <input type="text" id="snare" placeholder="Please input" /><br />
+        <label>Time:</label><br />
+        <input type="text" id="time" placeholder="Please input" /><br />
+        <label>Tom:</label><br />
+        <input type="text" id="tom" placeholder="Please input" /><br />
+        <button class="button_submit" id="submit">Submit</button>
+      </form>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
